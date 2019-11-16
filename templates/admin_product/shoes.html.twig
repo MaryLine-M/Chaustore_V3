@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Manage products{% endblock %}
+
+{% block body %}
+
+<div class="container mt-4">
+    <h1>SHOES</h1>
+
+    <table class="table table-responsive">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Gender</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.id}}</td>
+            <td>{{ product.name}}</td>
+            <td>(brand)</td>
+            <td>{{ product.price}}</td>
+            <td>{{ product.gender}}</td>
+            <td>
+               
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
