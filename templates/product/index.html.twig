@@ -2,10 +2,12 @@
 
 {% block title %}Product index{% endblock %}
 
-{% block body %}
-    <h1>Product index</h1>
 
-    <table class="table">
+{% block body %}
+
+    <h3>SHOES</h3>
+
+    <table class="list">
         <thead>
             <tr>
                 <th>Id</th>
@@ -17,6 +19,7 @@
             </tr>
         </thead>
         <tbody>
+
         {% for product in products %}
             <tr>
                 <td>{{ product.id }}</td>
@@ -25,8 +28,9 @@
                 <td>{{ product.price }}</td>
                 <td>{{ product.gender }}</td>
                 <td>
-                    <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
-                    <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
+                    <a class="buttonAdd" href="{{ path('product_new') }}">Create new</a>
+                    <a class="btn-view" href="{{ path('product_show', {'id': product.id}) }}">show</a>
+                    <a class="btn-update" href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -37,5 +41,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('product_new') }}">Create new</a>
 {% endblock %}
+

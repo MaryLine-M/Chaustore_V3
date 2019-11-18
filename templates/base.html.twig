@@ -4,12 +4,31 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T">
-    {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}{% endblock %}
+
+            <link href="{{ asset('css/styles.css') }}" rel="stylesheet"/>
     
     </head>
     <body>
-    
-        {% block body %}{% endblock %}
+    <nav>
+        <ul>
+            <li><a href="{{path('home')}}">HOME</a></li>
+            <li><a href="{{path('product_index')}}">Shoes</a></li>
+            <li><a href="{{path('brand_index')}}">Brands</a></li>
+            <li><a href="{{path('category_index')}}">Categories</a></li>
+            <li><a href="{{path('color_index')}}">Colors</a></li>
+            <li><a href="{{path('size_index')}}">Sizes</a></li>
+            <li><a href="{{path('stock_index')}}">Stocks</a></li>
+        </ul>
+    </nav>
+
+
+        {% block body %}
+        {% block tbody %} {% endblock %}
+        {% endblock %}
+
+
+
         {% block javascripts %}{% endblock %}
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>

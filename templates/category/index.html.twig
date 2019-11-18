@@ -3,9 +3,9 @@
 {% block title %}Category index{% endblock %}
 
 {% block body %}
-    <h1>Category index</h1>
+    <h3>Categories</h3>
 
-    <table class="table">
+    <table class="list">
         <thead>
             <tr>
                 <th>Id</th>
@@ -19,8 +19,9 @@
                 <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
                 <td>
-                    <a href="{{ path('category_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
+                    <a class="buttonAdd" href="{{ path('category_new') }}">Create new</a>
+                    <a class="btn-view" href="{{ path('category_show', {'id': category.id}) }}">show</a>
+                    <a class="btn-update" href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}

@@ -1,0 +1,143 @@
+html{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-image: url(../images/img-fond.jpg);
+	background-size: 100% cover;
+	
+}
+
+
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+/*
+	background-color: darkslateblue;
+*/
+	font-size: 60px;
+
+}
+h1{
+	color : white;
+	font-family: 'Special Elite', cursive;
+	margin: 50px;
+}
+
+h3{
+	color : white;
+	font-size: 50px;
+	text-align: center;
+}
+nav{
+	background-color: black;
+	padding: 5px;
+	font-family: sans-serif;
+	font-size: 40px;
+	text-align: center;
+}
+
+
+nav li{
+	padding: 0; margin: 0;
+	list-style: none;	
+	display: inline;
+}
+
+nav li a{
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 30px;
+}
+
+a:link
+{
+    color: white;
+}
+
+a:visited
+{
+    color: aliceblue;
+}
+
+a:hover
+{
+    color: darkslateblue;
+}
+
+
+
+.list{
+	font-family: sans-serif;
+	background-color: aliceblue;
+	padding: 50px;
+	margin: auto;
+	border-radius: 10px;
+	
+}
+
+.list h2{
+	font-family: sans-serif;
+	font-size: 40px;
+}
+
+
+table{
+	font-size: 15px;
+	width: 100%;
+
+}
+
+tr th,td{
+	padding: 10px;
+	border: 1px black dotted;
+	text-align: left;
+	height: 50px;
+}
+
+.buttonAdd{
+	font-size: 16px;
+	text-decoration: none;
+	background-color: greenyellow;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.btn-view{
+	font-size: 16px;
+	text-decoration: none;
+	background-color: gray;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.btn-update{
+	font-size: 16px;
+	text-decoration: none;
+	background-color: darkslateblue;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.btn-delete{
+	font-size: 16px;
+	text-decoration: none;
+	background-color: coral;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.alert{
+	color: red;
+	font-size: 18px;
+}
+
+.logout{
+	background-color: black;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 20px;
+	text-decoration: none;
+	margin-right: 20px;
+	float: right;
+}

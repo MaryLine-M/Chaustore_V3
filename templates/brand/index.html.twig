@@ -3,9 +3,9 @@
 {% block title %}Brand index{% endblock %}
 
 {% block body %}
-    <h1>Brand index</h1>
+    <h3>Brands</h3>
 
-    <table class="table">
+    <table class="list">
         <thead>
             <tr>
                 <th>Id</th>
@@ -21,8 +21,9 @@
                 <td>{{ brand.name }}</td>
                 <td>{{ brand.logo }}</td>
                 <td>
-                    <a href="{{ path('brand_show', {'id': brand.id}) }}">show</a>
-                    <a href="{{ path('brand_edit', {'id': brand.id}) }}">edit</a>
+                    <a class="buttonAdd" href="{{ path('brand_new') }}">Create new</a>
+                    <a class ="btn-view" href="{{ path('brand_show', {'id': brand.id}) }}">show</a>
+                    <a class ="btn-update" href="{{ path('brand_edit', {'id': brand.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +34,4 @@
         </tbody>
     </table>
 
-    <a href="{{ path('brand_new') }}">Create new</a>
 {% endblock %}

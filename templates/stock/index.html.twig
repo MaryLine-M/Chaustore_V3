@@ -3,9 +3,9 @@
 {% block title %}Stock index{% endblock %}
 
 {% block body %}
-    <h1>Stock index</h1>
+    <h3>Stocks</h3>
 
-    <table class="table">
+    <table class="list">
         <thead>
             <tr>
                 <th>Id</th>
@@ -19,8 +19,9 @@
                 <td>{{ stock.id }}</td>
                 <td>{{ stock.stock }}</td>
                 <td>
-                    <a href="{{ path('stock_show', {'id': stock.id}) }}">show</a>
-                    <a href="{{ path('stock_edit', {'id': stock.id}) }}">edit</a>
+                    <a class="buttonAdd" href="{{ path('stock_new') }}">Create new</a>
+                    <a class="btn-view" href="{{ path('stock_show', {'id': stock.id}) }}">show</a>
+                    <a class="btn-update" href="{{ path('stock_edit', {'id': stock.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +32,4 @@
         </tbody>
     </table>
 
-    <a href="{{ path('stock_new') }}">Create new</a>
 {% endblock %}
